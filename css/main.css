@@ -2,10 +2,10 @@
 :root{font-size: 16px; color:black; font-family: sans-serif;}
 a{text-decoration: none !important;}
 body,html{padding:0px;margin: 0px;}
-
+.media a{color:#000 !important;}
  
 /* ============== HEADER PORTION START FROM HERE ===================== */
-.side{ position:fixed; top: 0rem; left:0px; height: 100%;  bottom:0px;width:435px; z-index: 99999; }
+.side{ position:fixed; top: 0rem; left:0px; height: 100%;  bottom:0px; width:435px; z-index: 99999; transition:0.2s; }
 .main{overflow-y:scroll;  position: relative; top: 0rem; width: 100%; height: 100%; background: #fff;}
 .userPanel{background:#1A237E; text-align:center; padding:10px;}
 .userPanel img{border-radius: 50%; height: 90px; text-align: center; border: 2px solid #f1f1f1; padding: 5px;}
@@ -16,26 +16,92 @@ body,html{padding:0px;margin: 0px;}
 .chatMessage li:hover{background: #CCCACA; }
 .chatMessage li a{display: block;}
 .chatMessage li img{border-radius: 50%; height: 60px; border: 2px solid #F1F1F1; padding: 5px;}
+.userPanelChat h5{color:#000;}
 .userPanelChat p{margin-bottom:0rem; color:#757575;}
+.badges_txt{position:absolute; top:0px; right:0px;}
+.timeTxt{text-align:right; float:right; font-size:0.8rem;}
 /* ============== USER PANEL RIGHT PORTION START FROM HERE ===================== */
-.userPanelRight{background: #fff;box-shadow: 0px 0px 5px rgba(0,0,0,0.2);}
+.userPanelRight{background: #fff;box-shadow: 0px 0px 5px rgba(0,0,0,0.2);position:fixed; top:0px;  z-index:999; width:100%;}
 #upload{display:none;}
 /* ============== MAIN PORTION START FROM HERE ===================== */
-.mains{padding:15px 30px; overflow-y:auto; height: 100%; }
+.mains{padding:15px 30px; overflow-y:auto; height: 100%;margin-top:80px;}
 .userChat .chatBox{padding:15px; border:1px solid #bce7e4; background:white;}
-.col-sm-8.bgObject{background:url(../images/bgObject.jpg) no-repeat left center / cover !important; width: 100%; background-attachment: fixed;}
+.bgObject{background:url(../images/bgObject.jpg) no-repeat left center / cover !important; width: 100%; background-attachment: fixed;padding:0px; min-height: 100%; margin-left:435px;}
 .userChat .card-header img{height:33px;margin-right:10px; border-radius:50px;}
 .card{margin-bottom:15px;}
+.cirleImage{height:50px; border-radius:50px;}
+.mssTxt{background:#41c7fc80; color:#e07e7e; border-radius:5px; margin:15px auto !important; display:block; padding:7px 10px;}
+.mgZero{margin-left:0px !important; transition: 0.3s;}
+.trans{transition: 0.3s; width: 0px; overflow: hidden;}
+.userDetail a{display:block; color:#FFF; font-size:20px;}
+.bgBlue{background:#41c7fc80; color:#e07e7e; border-radius:5px; margin:15px auto !important; display:block; padding:7px 10px;}
+/* ============== MEDIA PORTION START FROM HERE ===================== */
+.badge{
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+  }
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
 /* ============== MEDIA PORTION START FROM HERE ===================== */
 
-
-
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .side{  width:auto !important; }
+  .bgObject {margin-left:0px !important;}
+  .timeTxt{text-align:left; float:initial; font-size:0.8rem; display: block;}
+  .mains{padding:15px;}
+  .card.w-50.w-70{width:90% !important;}
+  .mobile-nones{display:block;}
+  .web-nones{display: none !important;}
+  
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) { 
+    .side{  width:80px !important;}
+    .bgObject {margin-left:80px !important;}
+    .mains{padding:15px;}
+    .userPanel img { height: 50px;}
+    .card.w-50.w-70{width:90% !important;}
+    .mobile-nones{display:none !important;}
+    .web-nones{display: block;}
+    .user_name{width:50%;}
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+    .side{  width:90px !important;}
+    .bgObject {margin-left:80px !important;}
+    .mains{padding:15px;}
+    .userPanel img { height: 50px;}
+    .userPanel .userDetail span { font-size: 16px; }
+    .mobile-nones{display:none !important;}
+    .web-nones{display: block;}
+    .user_name{width:40%;}
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
+    .mobile-nones{display:none !important;}
+    .web-nones{display: block;}
+    .user_name{width:65%;}
+     }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) { 
+    .mobile-nones{display:none !important;}
+    .web-nones{display: block;}
+    .user_name{width:50%;}
+ }
+  
 
 /* ============== FOOTER PORTION START FROM HERE ===================== */
-.footerCont{position:fixed; bottom:0px; border:1px solid #f1f1f1; height:50px; width:97%; padding:1rem;}
-
+.footerCont{position:fixed; bottom:0px; border:1px solid #f1f1f1; width:100%; padding:0.9rem;}
+.footerCont span i{font-size: 20px;}
 /* ============== PASTCOMPANY PORTION START FROM HERE ===================== */
 
-
-/* ============== MEDIA PORTION START FROM HERE ===================== */
 
